@@ -6,6 +6,3 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka/
 
-spring:
-  application:
-    name: microservices-provider-dept
