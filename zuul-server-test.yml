@@ -1,1 +1,22 @@
+spring:
+  rabbitmq:
+    host: 192.168.1.125
+    port: 5672
+    username: guest
+    password: guest
+    
+zuul:
+  routes:
+#    microservices-provider-dept: /aaa/**
+    bbb:
+      path: /bbb/**
+      serviceId: microservices-provider-dept
+  ignored-patterns:
+    - /**/microservices-provider-dept/provider/dept/zuulTest
+  sensitive-headers:
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
